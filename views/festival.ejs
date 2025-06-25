@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festival</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    <main>
+        <section id="festival">
+            <article>
+                <h1>Rabobank muziek festival</h1>
+                <img id="first-image" src="/img/Sizzer-festivalmap.png" alt="Festival concept map">
+            </article>
+
+            <article class="toelichting">
+                <h3>(Muziek concept)</h3>
+                <p class="inspringen">Om een muziek strategie bruikbaar & leuk te maken. Passen wij de festival methode toe. Een methaphore voor jullie muziek compas</p>
+            </article>
+
+            <article>
+               
+                    <a href="">
+                        <h2>Main stage</h2>
+
+                        <div>
+                            <img src="/img/mainstage-horizontaal.jpg" alt="Image Main stage">
+
+                            <svg class="arrow" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 243.81 170.49">
+                                <path class="arrowSvg" d="M241.55,90.48c1.2-1.35,2.17-3,2.25-4.77.13-2.98-1.58-4.63-2.18-5.15L165.15,3.25c-7.68-7.17-18.75-1.67-15.67,8.68l62.09,64.04H7.56C4.25,75.97.16,80.97,0,84.47c-.14,3.24,3.6,9.45,6.55,9.45h205.01l-1.49,3-59.37,59.29c-6.12,9.28,4.37,18.76,13.01,12.01l76.66-76.56s.04-.03.04-.03c.36-.33.72-.68,1.06-1.06l.07-.07h0Z"/>
+                            </svg>
+                        </div>
+                       
+                    </a>
+              
+
+                
+                    <a href="">
+                        <h2>Starters stage</h2>
+
+                        <div>
+                            <img src="/img/startersstage-horizontaal.jpg" alt="Image starters stage">
+
+                            <svg class="arrow" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 243.81 170.49">
+                                <path class="arrowSvg" d="M241.55,90.48c1.2-1.35,2.17-3,2.25-4.77.13-2.98-1.58-4.63-2.18-5.15L165.15,3.25c-7.68-7.17-18.75-1.67-15.67,8.68l62.09,64.04H7.56C4.25,75.97.16,80.97,0,84.47c-.14,3.24,3.6,9.45,6.55,9.45h205.01l-1.49,3-59.37,59.29c-6.12,9.28,4.37,18.76,13.01,12.01l76.66-76.56s.04-.03.04-.03c.36-.33.72-.68,1.06-1.06l.07-.07h0Z"/>
+                            </svg>
+                        </div>
+                    </a>
+                
+
+               
+                    <a href="">
+                        <h2>Studenten stage</h2>
+
+                        <div>
+                            <img src="/img/studentenstage-horizontaal.jpg" alt="Image studenten stage">
+    
+                            <svg class="arrow" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 243.81 170.49">
+                                <path class="arrowSvg" d="M241.55,90.48c1.2-1.35,2.17-3,2.25-4.77.13-2.98-1.58-4.63-2.18-5.15L165.15,3.25c-7.68-7.17-18.75-1.67-15.67,8.68l62.09,64.04H7.56C4.25,75.97.16,80.97,0,84.47c-.14,3.24,3.6,9.45,6.55,9.45h205.01l-1.49,3-59.37,59.29c-6.12,9.28,4.37,18.76,13.01,12.01l76.66-76.56s.04-.03.04-.03c.36-.33.72-.68,1.06-1.06l.07-.07h0Z"/>
+                            </svg>
+                        </div>   
+                    </a>
+             
+
+
+            </article>
+        </section>
+    </main>
+
+    <%- include('partials/footer') %>
+    
+</body>
+</html>
+
+<style>
+    /* section en articles algemeen*/
+    #festival {
+        display: flex;
+        flex-direction: column;
+        gap: 4em;
+
+        width: 100%;
+        
+    }
+
+    #festival h3{
+        font-size: 1em;
+    }
+
+    #festival article{
+        margin-left: var(--margin-width);
+        margin-right: var(--margin-width);
+
+    }
+    
+    /* eertse article */
+    /* #festival img{
+        width: 100%;
+    } */
+    /* #festival img{
+        width: calc(100% - (2 * (var(--margin-width))));
+        
+    } */
+
+    #festival h1 {
+        font-size: 2.64em;
+        line-height: 1em;
+        font-weight: 400;
+
+        margin-top: .3em;
+        z-index: 10;
+    }
+
+    #first-image{
+        width: 100vw;
+        transform: translate(calc( -1 * (var(--margin-width))), calc( -2 * (var(--margin-width))));
+        z-index: -10;
+        position: relative;
+    }
+
+    /* tweede article */
+    /* article:nth-of-type(2){
+        height: 25vh;
+    } */
+
+    /* derde article */
+    article:nth-of-type(3){
+        display: flex;
+        flex-direction: column;
+        gap: 3em;
+
+        padding-bottom: 5em;
+
+    }
+
+    article:nth-of-type(3) img{
+        width: 85%;
+        /* transform: translate(calc( -1 * (var(--margin-width))), 0); */
+    }
+    
+    article:nth-of-type(3) div{
+        transform: translate(calc( -1 * (var(--margin-width))), calc( -1.5 * (var(--margin-width))));
+        position: relative;
+        z-index: -10;
+
+    }
+
+    @media( width > 40em){
+        article:nth-of-type(3) div{
+            transform: translate(calc( -1 * (var(--margin-width))), calc( -2.5 * (var(--margin-width))));
+        }
+
+    }
+
+
+    article:nth-of-type(3) div{
+        display: flex;
+        align-items: center;
+    }
+
+    .arrow{
+        transform: translate(calc( -2.5 * (var(--margin-width))), 0);
+        z-index: 10;
+        width: 120px;
+    }
+    
+    h2{
+        font-size: 1.75em;
+    }
+    @media( width > 40em){
+        h2{
+            font-size: 3rem;
+        }
+        
+    }
+    
+</style>

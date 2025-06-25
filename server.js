@@ -7,6 +7,9 @@ const PORT = 3000;
 app.set('view engine', 'ejs');
 app.use(express.static('static'));
 
+app.use('/rabobank_deliverables', express.static(path.join(__dirname, 'rabobank_deliverables')));
+
+
 app
    .get('/', onHome) 
    .get('/sonicbranding', onSonicBranding)
